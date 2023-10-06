@@ -1,0 +1,36 @@
+﻿@model int
+
+<form asp-action="Notification">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                Seu Id: <input type="text" id="userId" value=@Model readonly name="senderId"/>
+            </div>
+            <div class="col-6">&nbsp;</div>
+        </div>
+        <div class="row">Enviar mensagem?&nbsp;</div>
+        <div class="row">
+            <div class="col-12">
+                Id: <input type="text" id="receiverIdInput" name="receiverId" />
+                Mensagem: <input type="text" id="msgInput"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <input type="button" id="sendButton" value="Send" />
+                <hr />
+                <input type="submit" value="Notification Test" />
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul id="messagesList"></ul>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/microsoft/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
